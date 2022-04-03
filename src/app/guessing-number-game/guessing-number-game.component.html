@@ -1,0 +1,18 @@
+<h2>Guessing Number Game</h2>
+<p>Guess Number between 1 - 100</p>
+<ng-container *ngIf="results(correctNumber, guessedNumber); then youWon else youLost"></ng-container>
+<ng-template #youWon>
+    <p>You Won, correct number was {{ correctNumber }}</p>
+    <button (click)="playAgian()" class="btn btn-warning">Play Again</button>
+    <br>
+    <br>
+</ng-template>
+<ng-template #youLost>
+    <ng-container *ngIf="guessedNumber == -1; then dontShow else show"></ng-container>
+    <ng-template #dontShow >
+    </ng-template>
+    <ng-template #show>
+        <p>You Lost, try again</p>
+    </ng-template>
+</ng-template>
+

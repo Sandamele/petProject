@@ -1,0 +1,23 @@
+<h1 class="text-center">Form Change Style</h1>
+<!-- This form allows the user to change the color, background color, padding and the font size of paragraph -->
+<p [ngStyle]="{
+    'color': formValues.txtColor, 
+    'background-color': formValues.backgroundColor, '
+    font-size': formValues.txtFontSize, 
+    'padding': formValues.padding
+}">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores doloribus corporis harum nisi, expedita minima qui
+    corrupti quasi dolorum quia facere fugit non, nulla neque illo, accusamus nam placeat? Nostrum, perspiciatis.
+    Officia excepturi ullam rem magni dolorum repudiandae nisi possimus nostrum? Officia neque nostrum voluptate ab
+    nobis tempore quisquam assumenda laborum illum reprehenderit suscipit mollitia officiis, esse, tempora at similique
+    impedit repellendus beatae hic asperiores sint maiores. Blanditiis vel nesciunt rem totam necessitatibus similique
+    fugiat? Quibusdam fuga debitis temporibus eum et mollitia maiores corporis ratione, laboriosam eos aperiam nihil
+    exercitationem esse illo maxime neque, tempore veritatis ut asperiores suscipit unde.
+</p>
+<div class="form">
+<div class="form-group"><input type="text" #txtColor name="txtColor" placeholder="Enter color" class="form-control"></div><br>
+<div class="form-group"><input type="text" #backgroundColor name="backgroundColor" placeholder="Enter background" class="form-control"></div><br>
+<div class="form-group"><input type="text" #fontSize name="fontSize" placeholder="Enter font size" class="form-control"></div><br>
+<div class="form-group"><input type="text" #padding name="padding" placeholder="Enter padding" class="form-control"></div><br>
+<div class="form-group"><button (click)="changeStyle(txtColor.value, backgroundColor.value, fontSize.value, padding.value)" class="btn btn-danger form-control">Change</button></div>
+</div>

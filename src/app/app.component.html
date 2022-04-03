@@ -1,0 +1,14 @@
+<div class="container">
+  <app-anime-based-on-age></app-anime-based-on-age>
+  <br />
+</div>
+<hr />
+<div class="container">
+  <app-form-change></app-form-change>
+</div>
+<hr />
+<div class="container">  
+  <app-guessing-number-game [guessedNumber]="userNumber" ></app-guessing-number-game>
+  <input type="number" #userGuessedNumber name="userGuessedNumber">
+  <button (click)="submitGuessedNumber(userGuessedNumber.value)" class="btn btn-info">Submit</button>
+</div>

@@ -1,0 +1,35 @@
+<h2 class="text-center">Anime List Based On Age Group</h2>
+  <div class="form-group row">
+    <input type="number" #age name="age" placeholder="Enter your age" class="col-md-7">
+    <button (click)="showAnimeList(age.value)" class="btn btn-primary col-md-4">Submit</button>
+  </div>
+  <ng-template [ngIf]="userAge < 5 && userAge >= 0">
+    <h4>{{ animeHeading }}</h4>
+    <ul *ngFor="let animeU5 of animeListForUnderFive">
+      <li>{{ animeU5 }}</li>
+    </ul>
+  </ng-template>
+  <ng-template [ngIf]="userAge < 10 && userAge >= 5">
+    <h4>{{ animeHeading }}</h4>
+    <ul *ngFor="let animeU10 of animeListForUnderTen">
+      <li>{{ animeU10 }}</li>
+    </ul>
+  </ng-template>
+  <ng-template [ngIf]="userAge < 15 && userAge >= 10">
+    <h4>{{ animeHeading }}</h4>
+    <ul *ngFor="let animeU15 of animeListForUnderFifteen">
+      <li>{{ animeU15 }}</li>
+    </ul>
+  </ng-template>
+  <ng-template [ngIf]="userAge < 18 && userAge >= 15">
+    <h4>{{ animeHeading }}</h4>
+    <ul *ngFor="let animeU18 of animeListForUnderEighteen">
+      <li>{{ animeU18 }}</li>
+    </ul>
+  </ng-template>
+  <ng-template [ngIf]="userAge > 18">
+    <h4>{{ animeHeading }}</h4>
+    <ul *ngFor="let anime18 of animeListForEighteenPlus">
+      <li>{{ anime18 }}</li>
+    </ul>
+  </ng-template>
